@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.29609.76
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigma", "Enigma\Enigma.csproj", "{868B2379-457E-45DF-8C49-C0CDAA051F18}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTT", "TTT\TTT.csproj", "{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{868B2379-457E-45DF-8C49-C0CDAA051F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{868B2379-457E-45DF-8C49-C0CDAA051F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{868B2379-457E-45DF-8C49-C0CDAA051F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{868B2379-457E-45DF-8C49-C0CDAA051F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7BA33B98-80AC-4A23-BAAE-B94E79A4A5BD}
+		SolutionGuid = {944E63E4-FC24-4E8A-81A1-6270A6297E9B}
 	EndGlobalSection
 EndGlobal
