@@ -20,16 +20,32 @@ namespace TTT
     /// </summary>
     public partial class MainWindow : Window
     {
+        /// <summary>
+        /// Metoda wywoluje inne metody tworząc kolejność zdarzeń w programie.
+        /// </summary>
         public MainWindow()
         {
+            
             InitializeComponent();
             NewGame();
         }
+        /// <param name="results">Zmienna służy do tworzena siatki</param>
+        /// <param name="gameEnded">Zmienna jest jednym z stanów gry</param>
+        /// <param name="buttonIndex">Zmienna przydziela do każdej komórki swój index, przez co możemy wiedzić z którą komórką działamy</param>
+        /// <param name="random">Tworzy losową liczbę</param>
 
         private bool[,] results;
         private bool gameEnded;
         private Button[,] buttonIndex;
         Random random = new Random();
+
+        /// <summary>
+        /// Metoda tworzy lokacje w grze, gdzie będą się mieściły komórki, ktorę są wynegerowanne losowo oraz ich zmiana od
+        /// </summary>
+
+        /// <param name="buttoni">Kolumna</param>
+        /// <param name="buttonj">Wiersz</param>
+
         private void NewGame()
         {
             results = new bool[5,5];
@@ -59,8 +75,8 @@ namespace TTT
                 }
             });
 
-
-            for (var a = 0; a < 100; a++)
+            
+            for (var a = 0; a < 10; a++)
             {
                 int i = random.Next(0, 5);
                 int j = random.Next(0, 5);
@@ -96,7 +112,11 @@ namespace TTT
 
             gameEnded = false;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (gameEnded)
