@@ -16,23 +16,22 @@ using System.Windows.Shapes;
 namespace TTT
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainWindow.xaml
+    /// logic and interactions for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
         /// <summary>
-        /// Metoda wywoluje inne metody tworząc kolejność zdarzeń w programie.
+        /// Main method and sequence of the program
         /// </summary>
         public MainWindow()
-        {
-            
+        {           
             InitializeComponent();
             NewGame();
         }
-        /// <param name="results">Zmienna służy do tworzena siatki</param>
-        /// <param name="gameEnded">Zmienna jest jednym z stanów gry</param>
-        /// <param name="buttonIndex">Zmienna przydziela do każdej komórki swój index, przez co możemy wiedzić z którą komórką działamy</param>
-        /// <param name="random">Tworzy losową liczbę</param>
+        /// <param name="results">Two dimentional array that stores bool value of button state</param>
+        /// <param name="gameEnded">Bool value of game state</param>
+        /// <param name="buttonIndex">Two dimentonal array for button objects</param>
+        /// <param name="random">Object used to generate random numbers</param>
 
         private bool[,] results;
         private bool gameEnded;
@@ -40,11 +39,14 @@ namespace TTT
         Random random = new Random();
 
         /// <summary>
-        /// Metoda tworzy lokacje w grze, gdzie będą się mieściły komórki, ktorę są wynegerowanne losowo oraz ich zmiana od
+        /// gives index number to every button object
+        /// and resets it states
+        /// then preforms random "shuffle" on the board
+        /// in order to prepare it for player
         /// </summary>
 
-        /// <param name="buttoni">Kolumna</param>
-        /// <param name="buttonj">Wiersz</param>
+        /// <param name="buttoni">Column</param>
+        /// <param name="buttonj">row</param>
 
         private void NewGame()
         {
@@ -116,10 +118,13 @@ namespace TTT
             gameEnded = false;
         }
         /// <summary>
-        /// 
+        ///  After button is pressed it checks if game was finished before
+        ///  if yes, it starts a new game, if not, it changes
+        ///  states of and colors of buttons and then
+        ///  checks if game is won
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The clicked button</param>
+        /// <param name="e">data about the event</param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (gameEnded)
@@ -164,6 +169,11 @@ namespace TTT
             WinCheck();           
         }
 
+        /// <summary>
+        ///  Changes color of button, to other color
+        /// </summary>
+        /// <param name="ar">Kolumna przycisku</param>
+        /// <param name="b">Wiersz przycisku</param>
         void ChangeColor(int a, int b)
         {
             if (results[a, b])
@@ -176,7 +186,11 @@ namespace TTT
             }
         }
 
-
+        /// <summary>
+        ///  Method that checks if game is won
+        ///  if it is it changes color of all buttons to lime green
+        ///  and changes state of the game, by changing bool to true
+        /// </summary>
         private void WinCheck()
         {
             foreach (bool light in results)
