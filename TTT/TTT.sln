@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTT", "TTT\TTT.csproj", "{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesTurningTint", "TTT\TilesTurningTint.csproj", "{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TTTTests", "TTTTests\TTTTests.csproj", "{E1E5CF0B-525B-488E-9BEE-D87527B78FE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject2", "UnitTestProject2\UnitTestProject2.csproj", "{FB406EDA-3023-40DE-88CE-DA83F7203878}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1E5CF0B-525B-488E-9BEE-D87527B78FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1E5CF0B-525B-488E-9BEE-D87527B78FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1E5CF0B-525B-488E-9BEE-D87527B78FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1E5CF0B-525B-488E-9BEE-D87527B78FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -125,13 +125,13 @@ namespace TTT
         /// </summary>
         /// <param name="sender">The clicked button</param>
         /// <param name="e">data about the event</param>
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void Button_Click(object sender, RoutedEventArgs e)
         {
             if (gameEnded)
             {
                 NewGame();
                 return;
-            }
+            } 
 
             var button = (Button)sender;
             int column = Grid.GetColumn(button);
