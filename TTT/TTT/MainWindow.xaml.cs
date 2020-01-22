@@ -75,8 +75,11 @@ namespace TTT
                 }
             });
 
-            
-            for (var a = 0; a < 10; a++)
+            //changing number can impact difficulty
+            //Let it stay on 100, it provides
+            //decent randomness and very high
+            //chalange, while still performing fast
+            for (var a = 0; a < 100; a++)
             {
                 int i = random.Next(0, 5);
                 int j = random.Next(0, 5);
