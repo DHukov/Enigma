@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TTT;
 
+
 namespace UnitTestProject2
 {
     [TestClass]
@@ -12,10 +13,6 @@ namespace UnitTestProject2
         [TestMethod]
         public void CheckWhereWasClickedButton()
         {
-            //   object mw = new MainWindow();
-            //arrange
-            object sender;
-            //  var button = sender;
             int column = 5;
             int row = 4;
             int i = column;
@@ -23,29 +20,33 @@ namespace UnitTestProject2
 
             bool expected = results[i, j];
             bool answer = check[5, 4];
-            /*
-            int i = 5;
-            int j = 3;
-            */
-            // results[i,j] ^= true;
-
+            
             MainWindow k = new MainWindow();
             bool act = k.Button_Click(answer);
 
-            // results
             Assert.AreEqual(expected, act);
 
-            //act
-            //  mw.Button_Click(new );
+        }
+        public void FeelAllButons_InGreen_IfYouWin()
+        {
+
+        }
+        public void ChangCollorOfButton_OnOtherCOlor_ifIsTrue()
+        {
+            int a = 3;
+            int b = 4;
+
+            bool Expected = results[3, 4];
+            bool answer = check[3, 4];
 
 
-            //assert
+
+            MainWindow k = new MainWindow();
+            bool act = k.ChangeColor(answer);
+
+            Assert.AreEqual(Expected, act);
 
 
         }
-
-      //  private bool[,] results;
-      //  private bool[,] check;
-       
     }
 }

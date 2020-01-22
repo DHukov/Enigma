@@ -172,7 +172,7 @@ namespace TTT
         /// <summary>
         ///  Changes color of button, to other color
         /// </summary>
-        /// <param name="ar">Kolumna przycisku</param>
+        /// <param name="a">Kolumna przycisku</param>
         /// <param name="b">Wiersz przycisku</param>
         void ChangeColor(int a, int b)
         {
@@ -191,6 +191,7 @@ namespace TTT
         ///  if it is it changes color of all buttons to lime green
         ///  and changes state of the game, by changing bool to true
         /// </summary>
+        /// 
         private void WinCheck()
         {
             foreach (bool light in results)
@@ -205,6 +206,7 @@ namespace TTT
             {
                 button.Background = Brushes.LimeGreen;
             });
+
         }
     }
 }
