@@ -40,16 +40,11 @@ namespace UnitTestProject1
 
 
             //assert
-
-
         }
-
         [TestMethod]
         public void TestMethod1()
         {
 
         }
-
-
     }
 }

@@ -80,7 +80,7 @@ namespace TTT
             //changing number can impact difficulty
             //Let it stay on 100, it provides
             //decent randomness and very high
-            //chalange, while still performing fast
+            //challange, while still performing fast
             for (var a = 0; a < 100; a++)
             {
                 int i = random.Next(0, 5);
@@ -120,11 +120,11 @@ namespace TTT
         /// <summary>
         ///  After button is pressed it checks if game was finished before
         ///  if yes, it starts a new game, if not, it changes
-        ///  states of and colors of buttons and then
-        ///  checks if game is won
+        ///  states of and colours of buttons and then
+        ///  checks if the game is finished
         /// </summary>
         /// <param name="sender">The clicked button</param>
-        /// <param name="e">data about the event</param>
+        /// <param name="e">Data about the event</param>
         public void Button_Click(object sender, RoutedEventArgs e)
         {
             if (gameEnded)
@@ -170,10 +170,10 @@ namespace TTT
         }
 
         /// <summary>
-        ///  Changes color of button, to other color
+        ///  Changes colour of button, to other colour
         /// </summary>
-        /// <param name="a">Kolumna przycisku</param>
-        /// <param name="b">Wiersz przycisku</param>
+        /// <param name="a">Column of the button</param>
+        /// <param name="b">Row of the button</param>
         void ChangeColor(int a, int b)
         {
             if (results[a, b])
@@ -187,11 +187,10 @@ namespace TTT
         }
 
         /// <summary>
-        ///  Method that checks if game is won
-        ///  if it is it changes color of all buttons to lime green
+        ///  Method that checks if game is finished
+        ///  if it is it changes colour of all buttons to lime green
         ///  and changes state of the game, by changing bool to true
         /// </summary>
-        /// 
         private void WinCheck()
         {
             foreach (bool light in results)
