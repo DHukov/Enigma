@@ -6,8 +6,8 @@ using TTT;
 namespace UnitTestProject2
 {
     [TestClass]
-    public class UnitTest1
-    {
+    public class TestMainWindow
+    {/*
         private bool[,] results;
         private bool[,] check;
         [TestMethod]
@@ -48,5 +48,6 @@ namespace UnitTestProject2
 
 
         }
+        */
     }
 }
