@@ -37,6 +37,7 @@ namespace TTT
         private bool gameEnded;
         private Button[,] buttonIndex;
         Random random = new Random();
+        private Task<bool> task;
 
         /// <summary>
         /// gives index number to every button object
@@ -191,7 +192,7 @@ namespace TTT
         ///  if it is it changes colour of all buttons to lime green
         ///  and changes state of the game, by changing bool to true
         /// </summary>
-        private void WinCheck()
+        private async void WinCheck()
         {
             foreach (bool light in results)
             {
@@ -200,6 +201,7 @@ namespace TTT
                     return;
                 }
             }
+            bool gameEnded = await task;
             gameEnded = true;
             Container.Children.Cast<Button>().ToList().ForEach(button =>
             {
