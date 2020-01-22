@@ -36,7 +36,7 @@ namespace UnitTestProject2
             int a = 3;
             int b = 4;
 
-            bool Expected = results[3, 4];
+            bool Expected = results[a, b];
             bool answer = check[3, 4];
 
 
