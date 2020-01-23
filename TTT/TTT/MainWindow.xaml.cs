@@ -30,15 +30,16 @@ namespace TTT
         }
         TilesLogic logic;
         private Button[,] buttonIndex;
+        int boardEdge = 4;
 
 
         private void NewGame()
         {
             logic = new TilesLogic();
-            logic.NewGame(4,100);
-            buttonIndex = new Button[4, 4];
-            AddButtonsToArray(4);
-            ProcessColors(4);
+            logic.NewGame(boardEdge,100);
+            buttonIndex = new Button[boardEdge, boardEdge];
+            AddButtonsToArray(boardEdge);
+            ProcessColors(boardEdge);
         }
         public void AddButtonsToArray(int edge)
         {
@@ -69,12 +70,12 @@ namespace TTT
             int column = Grid.GetColumn(button);
             int row = Grid.GetRow(button);
             logic.ProcessInput(column, row);
-            ProcessColors(4);
+            ProcessColors(boardEdge);
             if (logic.CheckForWin())
             {
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < boardEdge; i++)
                 {
-                    for (int j = 0; j < 4; j++)
+                    for (int j = 0; j < boardEdge; j++)
                     {
                         buttonIndex[i, j].Background = Brushes.LimeGreen;
                     }
