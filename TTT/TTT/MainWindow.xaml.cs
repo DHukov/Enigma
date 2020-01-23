@@ -24,190 +24,81 @@ namespace TTT
         /// Main method and sequence of the program
         /// </summary>
         public MainWindow()
-        {           
+        {
             InitializeComponent();
             NewGame();
         }
-        /// <param name="results">Two dimentional array that stores bool value of button state</param>
-        /// <param name="gameEnded">Bool value of game state</param>
-        /// <param name="buttonIndex">Two dimentonal array for button objects</param>
-        /// <param name="random">Object used to generate random numbers</param>
-
-        private bool[,] results;
-        private bool gameEnded;
+        TilesLogic logic;
         private Button[,] buttonIndex;
-        Random random = new Random();
-        private Task<bool> task;
 
-        /// <summary>
-        /// gives index number to every button object
-        /// and resets it states
-        /// then preforms random "shuffle" on the board
-        /// in order to prepare it for player
-        /// </summary>
-
-        /// <param name="buttoni">Column</param>
-        /// <param name="buttonj">row</param>
 
         private void NewGame()
         {
-            results = new bool[5,5];
-            buttonIndex = new Button[5, 5];
-            int buttoni = 0;
-            int buttonj = 0;
-            for (var i = 0; i < 5; i++)
-            {
-                for (var j = 0; j < 5; j++)
-                {
-                    results[i,j] = true;
-                }
-            }
-
+            logic = new TilesLogic();
+            logic.NewGame(4,100);
+            buttonIndex = new Button[4, 4];
+            AddButtonsToArray(4);
+            ProcessColors(4);
+        }
+        public void AddButtonsToArray(int edge)
+        {
+            int i = 0;
+            int j = 0;
             Container.Children.Cast<Button>().ToList().ForEach(button =>
             {
-                buttonIndex[buttoni, buttonj] = button;
-                button.Background = Brushes.Yellow;
-                if (buttoni == 4)
+                buttonIndex[i, j] = button;
+                if (i == 3)
                 {
-                    buttoni = 0;
-                    buttonj++;
+                    i = 0;
+                    j++;
                 }
                 else
                 {
-                    buttoni++;
+                    i++;
                 }
             });
-
-            //changing number can impact difficulty
-            //Let it stay on 100, it provides
-            //decent randomness and very high
-            //challange, while still performing fast
-            for (var a = 0; a < 100; a++)
-            {
-                int i = random.Next(0, 5);
-                int j = random.Next(0, 5);
-                //Clicked Button
-                results[i, j] ^= true;
-                ChangeColor(i, j);
-                //Left Button
-                if (i != 0)
-                {
-                    results[i - 1, j] ^= true;
-                    ChangeColor(i - 1, j);
-                }
-                //right button
-                if (i != 4)
-                {
-                    results[i + 1, j] ^= true;
-                    ChangeColor(i + 1, j);
-                }
-                //Up button
-                if (j != 0)
-                {
-                    results[i, j - 1] ^= true;
-                    ChangeColor(i, j - 1);
-                }
-                //Down button
-                if (j != 4)
-                {
-                    results[i, j + 1] ^= true;
-                    ChangeColor(i, j + 1);
-                }
-
-            }
-
-            gameEnded = false;
         }
-        /// <summary>
-        ///  After button is pressed it checks if game was finished before
-        ///  if yes, it starts a new game, if not, it changes
-        ///  states of and colours of buttons and then
-        ///  checks if the game is finished
-        /// </summary>
-        /// <param name="sender">The clicked button</param>
-        /// <param name="e">Data about the event</param>
         public void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (gameEnded)
+            if (logic.CheckForWin())
             {
                 NewGame();
                 return;
             } 
-
             var button = (Button)sender;
             int column = Grid.GetColumn(button);
             int row = Grid.GetRow(button);
-            int i = column;
-            int j = row;
-
-            //Clicked Button
-            results[i, j] ^= true;
-            ChangeColor(i,j);
-            //Left Button
-            if (i != 0)
+            logic.ProcessInput(column, row);
+            ProcessColors(4);
+            if (logic.CheckForWin())
             {
-                results[i - 1, j] ^= true;
-                ChangeColor(i - 1, j);
-            }
-            //right button
-            if(i != 4)
-            {
-                results[i + 1, j] ^= true;
-                ChangeColor(i + 1, j);
-            }
-            //Up button
-            if (j != 0)
-            {
-                results[i, j - 1] ^= true;
-                ChangeColor(i, j - 1);
-            }
-            //Down button
-            if (j != 4)
-            {
-                results[i, j + 1] ^= true;
-                ChangeColor(i, j + 1);
-            }
-            WinCheck();           
-        }
-
-        /// <summary>
-        ///  Changes colour of button, to other colour
-        /// </summary>
-        /// <param name="a">Column of the button</param>
-        /// <param name="b">Row of the button</param>
-        void ChangeColor(int a, int b)
-        {
-            if (results[a, b])
-            {
-                buttonIndex[a, b].Background = Brushes.Yellow;
-            }
-            else
-            {
-                buttonIndex[a, b].Background = Brushes.Black;
-            }
-        }
-
-        /// <summary>
-        ///  Method that checks if game is finished
-        ///  if it is it changes colour of all buttons to lime green
-        ///  and changes state of the game, by changing bool to true
-        /// </summary>
-        private async void WinCheck()
-        {
-            foreach (bool light in results)
-            {
-                if (!light)
+                for (int i = 0; i < 4; i++)
                 {
-                    return;
+                    for (int j = 0; j < 4; j++)
+                    {
+                        buttonIndex[i, j].Background = Brushes.LimeGreen;
+                    }
                 }
             }
-            bool gameEnded = await task;
-            gameEnded = true;
-            Container.Children.Cast<Button>().ToList().ForEach(button =>
-            {
-                button.Background = Brushes.LimeGreen;
-            });
-
         }
+
+        void ProcessColors(int edge)
+        {
+            for (int i = 0; i < edge; i++)
+            {
+                for (int j = 0; j < edge; j++)
+                {
+                    if (logic.isTileActive[i,j])
+                    {
+                        buttonIndex[i, j].Background = Brushes.Yellow;
+                    }
+                    else
+                    {
+                        buttonIndex[i, j].Background = Brushes.Black;
+                    }
+                }
+            }
+        }
+
     }
 }
