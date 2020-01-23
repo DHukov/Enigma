@@ -24,12 +24,7 @@ namespace TTT
                 }
             }
             edgeSize = tilesPerEdge;
-            for (int i = 0; i < randomShufflePower; i++)
-            {
-                int column = random.Next(0, tilesPerEdge);
-                int row = random.Next(0, tilesPerEdge);
-                ProcessInput(column, row);
-            }
+            Shuffle(randomShufflePower);
         }
         public void ProcessInput(int column, int row)
         {
@@ -46,6 +41,20 @@ namespace TTT
                 if (!active) return false;
             }
             return true;
+        }
+        public void Shuffle(int power)
+        {
+            for (int i = 0; i < power; i++)
+            {
+                int column = random.Next(0, edgeSize);
+                int row = random.Next(0, edgeSize);
+                ProcessInput(column, row);
+            }
+            foreach (bool active in isTileActive)
+            {
+                if (!active) return;
+            }
+            Shuffle(power);
         }
     }
 }
