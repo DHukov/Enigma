@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesTurningTint", "TTT\Til
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesTurningTint Test", "UnitTestProject2\TilesTurningTint Test.csproj", "{FB406EDA-3023-40DE-88CE-DA83F7203878}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Project", "WPF_Project\WPF_Project.csproj", "{0652F98F-A61C-4FF5-9209-DD6150390212}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0652F98F-A61C-4FF5-9209-DD6150390212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0652F98F-A61C-4FF5-9209-DD6150390212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0652F98F-A61C-4FF5-9209-DD6150390212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0652F98F-A61C-4FF5-9209-DD6150390212}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
