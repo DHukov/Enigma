@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesTurningTint", "TTT\TilesTurningTint.csproj", "{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Project_Interface", "WPF_Project\WPF_Project_Interface.csproj", "{0652F98F-A61C-4FF5-9209-DD6150390212}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesTurningTint Test", "UnitTestProject2\TilesTurningTint Test.csproj", "{FB406EDA-3023-40DE-88CE-DA83F7203878}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests_For_Code", "Tests_For_Code\Tests_For_Code.csproj", "{77638831-43CC-4A98-8A5C-B7C300863005}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_Project", "WPF_Project\WPF_Project.csproj", "{0652F98F-A61C-4FF5-9209-DD6150390212}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logic_CodeOfProgram", "Logic_CodeOfProgram\Logic_CodeOfProgram.csproj", "{944CF2C1-9C57-44EA-83CB-4E25FC2DF97D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0652F98F-A61C-4FF5-9209-DD6150390212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0652F98F-A61C-4FF5-9209-DD6150390212}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0652F98F-A61C-4FF5-9209-DD6150390212}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0652F98F-A61C-4FF5-9209-DD6150390212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77638831-43CC-4A98-8A5C-B7C300863005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77638831-43CC-4A98-8A5C-B7C300863005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77638831-43CC-4A98-8A5C-B7C300863005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77638831-43CC-4A98-8A5C-B7C300863005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{944CF2C1-9C57-44EA-83CB-4E25FC2DF97D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{944CF2C1-9C57-44EA-83CB-4E25FC2DF97D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{944CF2C1-9C57-44EA-83CB-4E25FC2DF97D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{944CF2C1-9C57-44EA-83CB-4E25FC2DF97D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

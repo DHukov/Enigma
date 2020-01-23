@@ -93,5 +93,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logic_CodeOfProgram\Logic_CodeOfProgram.csproj">
+      <Project>{944cf2c1-9c57-44ea-83cb-4e25fc2df97d}</Project>
+      <Name>Logic_CodeOfProgram</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
