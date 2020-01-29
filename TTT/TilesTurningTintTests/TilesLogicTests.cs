@@ -47,13 +47,13 @@ namespace TTT.Tests
         [TestMethod()]
         public void CheckForWin()
         {
-            bool active;
-
+            bool active = true;
+            bool expected = true;
 
             TilesLogic tl = new TilesLogic();
-            var actual = tl.CheckForWin();
+            bool actual = tl.CheckForWin();
 
-            // Assert.
+            Assert.AreEqual(expected, actual);
         }
 
     }

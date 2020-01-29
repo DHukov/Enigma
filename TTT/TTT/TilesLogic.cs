@@ -57,7 +57,7 @@ namespace TTT
             }
             return true;
         }
-        /// <summary>
+        /// <summary>d
         /// Methode generated random map for game
         /// </summary>
         /// <param name="power"></param>
