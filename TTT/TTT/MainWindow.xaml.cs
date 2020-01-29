@@ -32,7 +32,9 @@ namespace TTT
         private Button[,] buttonIndex;
         int boardEdge = 4;
 
-
+        /// <summary>
+        /// Create a new game
+        /// </summary>
         private void NewGame()
         {
             logic = new TilesLogic();
@@ -41,6 +43,10 @@ namespace TTT
             AddButtonsToArray(boardEdge);
             ProcessColors(boardEdge);
         }
+        /// <summary>
+        /// give each cells unique index
+        /// </summary>
+        /// <param name="edge"></param>
         public void AddButtonsToArray(int edge)
         {
             int i = 0;
@@ -59,6 +65,11 @@ namespace TTT
                 }
             });
         }
+        /// <summary>
+        /// Check where was clicked and check on win game if we won game map will be green 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void Button_Click(object sender, RoutedEventArgs e)
         {
             if (logic.CheckForWin())
@@ -82,7 +93,10 @@ namespace TTT
                 }
             }
         }
-
+        /// <summary>
+        /// repaint if we click 
+        /// </summary>
+        /// <param name="edge"></param>
         void ProcessColors(int edge)
         {
             for (int i = 0; i < edge; i++)

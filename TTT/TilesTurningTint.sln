@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesTurningTint", "TTT\TilesTurningTint.csproj", "{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesTurningTint Test", "UnitTestProject2\TilesTurningTint Test.csproj", "{FB406EDA-3023-40DE-88CE-DA83F7203878}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesTurningTintTests", "TilesTurningTintTests\TilesTurningTintTests.csproj", "{98EFA909-6A77-4540-9B72-056A0EA1683C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4A2C129-AA81-4055-B9BC-B16DC5A0EE3E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB406EDA-3023-40DE-88CE-DA83F7203878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98EFA909-6A77-4540-9B72-056A0EA1683C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98EFA909-6A77-4540-9B72-056A0EA1683C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98EFA909-6A77-4540-9B72-056A0EA1683C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98EFA909-6A77-4540-9B72-056A0EA1683C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
